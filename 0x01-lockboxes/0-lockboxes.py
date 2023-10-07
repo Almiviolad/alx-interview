@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """module contains function that determine if all thr lockboxes can opened"""
 
 
