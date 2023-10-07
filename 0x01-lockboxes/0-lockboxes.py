@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
+"""module contains function that determine if all thr lockboxes can opened"""
+
+
 def canUnlockAll(boxes):
+    """Arg: boxes-an list of boxes
+       return: True if all the boxes can be opened and False otherwise"""
     if boxes[0] != []:
         avail_keys = []
         boxNo = len(boxes)
@@ -9,7 +14,7 @@ def canUnlockAll(boxes):
         for key in avail_keys:
             current = boxes[avail_keys[i]]
             for key_no in current:
-                if not key_no in avail_keys and key_no != 0 and key_no < boxNo:
+                if key_no not in avail_keys and key_no != 0 and key_no < boxNo:
                     avail_keys.append(key_no)
             i = i + 1
         if boxNo == len(avail_keys) + 1:
