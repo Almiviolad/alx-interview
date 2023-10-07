@@ -6,6 +6,8 @@ def canUnlockAll(boxes):
     """Arg: boxes-an list of boxes
        return: True if all the boxes can be opened and False otherwise"""
     if boxes[0] != []:
+        if boxes[0] == [0]:
+            return (True)
         avail_keys = []
         boxNo = len(boxes)
         for key in boxes[0]:
