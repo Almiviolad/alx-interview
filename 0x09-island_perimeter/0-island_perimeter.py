@@ -27,16 +27,15 @@ def island_perimeter(grid):
                 # down
                 down_idx = array_idx + 1
                 down = 0
-                if down_idx < (len(grid) - 1):
+                if down_idx < len(grid):
                     down = grid[down_idx][col_idx]
                 if down == 0:
                     perimeter += 1
                 # right
                 after_idx = col_idx + 1
                 after = 0
-                if col_idx < len(array):
+                if col_idx < len(array) - 1:
                     after = array[after_idx]
                 if after == 0:
                     perimeter += 1
-                    break
     return perimeter
